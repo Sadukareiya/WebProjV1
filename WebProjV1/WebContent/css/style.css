@@ -1,0 +1,80 @@
+/* テーブル全体のスタイル */
+table {
+    width: auto; /* テーブルの幅を自動に設定 */
+    border-spacing: 0; /* セル間の余白をなくす */
+    font-size: 14px; /* テーブル内のフォントサイズを14pxに設定 */
+}
+
+/* テーブルヘッダー (th) のスタイル */
+table th {
+    color: #fff; /* ヘッダーのテキストの色を白に設定 */
+    padding: 8px 15px; /* ヘッダーセルの上下に8px、左右に15pxの余白を設定 */
+    background: #258; /* ヘッダーの背景色を#258の濃い青色に設定 */
+    background: -moz-linear-gradient(rgba(34, 85, 136, 0.7), rgba(34, 85, 136, 0.9) 50%); /* Mozilla用のグラデーション */
+    background: -webkit-gradient(linear, 100% 0%, 100% 50%, from(rgba(34, 85, 136, 0.7)), to(rgba(34, 85, 136, 0.9))); /* Webkit用のグラデーション */
+    font-weight: bold; /* ヘッダーのテキストを太字にする */
+    border-left: 1px solid #258; /* ヘッダーセルの左側に1pxのボーダーを設定 */
+    border-top: 1px solid #258; /* ヘッダーセルの上側に1pxのボーダーを設定 */
+    border-bottom: 1px solid #258; /* ヘッダーセルの下側に1pxのボーダーを設定 */
+    line-height: 120%; /* 行間を120%に設定 */
+    text-align: center; /* ヘッダーのテキストを中央揃えにする */
+    text-shadow: 0 -1px 0 rgba(34, 85, 136, 0.9); /* ヘッダーのテキストに影をつける */
+    box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3) inset; /* ヘッダーセルの内側に薄い影をつける */
+}
+
+/* ヘッダーの最初のセルに角丸をつける */
+table th:first-child {
+    border-radius: 5px 0 0 0; /* 左上の角を丸くする */
+}
+
+/* ヘッダーの最後のセルに角丸をつける */
+table th:last-child {
+    border-radius: 0 5px 0 0; /* 右上の角を丸くする */
+    border-right: 1px solid #258; /* ヘッダーセルの右側に1pxのボーダーをつける */
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(255, 255, 255, 0.3) inset; /* 外側に影をつけ、内側にも影を追加 */
+}
+
+/* 各データセル (td) のスタイル */
+table tr td {
+    padding: 8px 15px; /* セル内に上下8px、左右15pxの余白をつける */
+    border-bottom: 1px solid #84b2e0; /* セルの下に#84b2e0の1pxのボーダーをつける */
+    border-left: 1px solid #84b2e0; /* セルの左側にも同じボーダーをつける */
+    text-align: center; /* セル内のテキストを中央揃えにする */
+}
+
+/* 行の最後のセルに影を追加 */
+table tr td:last-child {
+    border-right: 1px solid #84b2e0; /* セルの右側にボーダーをつける */
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1); /* 外側に軽い影をつける */
+}
+
+/* 奇数行の背景色を白に設定 */
+table tr {
+    background: #fff; /* 行の背景を白にする */
+}
+
+/* 奇数行に背景色を設定（#f1f6fc） */
+table tr:nth-child(2n+1) {
+    background: #f1f6fc; /* 奇数行に淡い青色の背景を設定 */
+}
+
+/* 最後の行のセルに影を追加 */
+table tr:last-child td {
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1); /* 最後の行のセルに軽い影をつける */
+}
+
+/* 最後の行の最初のセルに角丸をつける */
+table tr:last-child td:first-child {
+    border-radius: 0 0 0 5px; /* 最後の行の左下のセルに角丸をつける */
+}
+
+/* 最後の行の最後のセルに角丸をつける */
+table tr:last-child td:last-child {
+    border-radius: 0 0 5px 0; /* 最後の行の右下のセルに角丸をつける */
+}
+
+/* 行にマウスをホバーしたときのスタイル */
+table tr:hover {
+    background: #bbd4ee; /* 行にホバーされたとき、背景色を#bbd4eeにする */
+    cursor: pointer; /* マウスがホバーしたときにカーソルをポインターに変更 */
+}
