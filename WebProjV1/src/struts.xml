@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  XMLファイルの宣言 ファイルがUTF-８にエンコードされている -->
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    <!-- Strutsフレームワークの設定ファイルであることを示す宣言文 -->
+
+<struts>
+    <!-- struts.devModeをtrueに設定して、Strutsの開発モードを有効にします。 -->
+    <!-- これによりでバックがしやすくなる -->
+    <constant name="struts.devMode" value="true" />
+
+    <!-- パッケージ定義: ここでは`com.diworksdev.webprojv1.action`というパッケージを使用しています -->
+    <package name="com.diworksdev.webprojv1.action" extends="struts-default">
+
+        <!-- HelloStrutsActionの設定 -->
+        <action name="HelloStrutsAction"
+                class="com.diworksdev.webprojv1.action.HelloStrutsAction"
+                method="execute">
+            <!-- 成功した場合に遷移するページ -->
+            <result name="success">hello.jsp</result>
+            <!-- エラーが発生した場合に遷移するページ -->
+            <result name="error">helloStrutsError.jsp</result>
+        </action>
+
+                <!-- WelcomeActionの設定 -->
+        <action name="WelcomeAction"
+                class="com.diworksdev.webprojv1.action.WelcomeAction"
+                method="execute">
+            <!-- 成功した場合に遷移するページ -->
+            <result name="success">welcome.jsp</result>
+        </action>
+
+        <!-- LoginActionの設定 -->
+        <action name="LoginAction"
+                class="com.diworksdev.webprojv1.action.LoginAction"
+                method="execute">
+            <!-- 成功した場合に遷移するページ -->
+            <result name="success">login.jsp</result>
+            <!-- エラーが発生した場合に遷移するページ -->
+            <result name="error">loginError.jsp</result>
+        </action>
+
+        <!-- InquiryActionの設定 -->
+        <action name="InquiryAction"
+                class="com.diworksdev.webprojv1.action.InquiryAction"
+                method="execute">
+            <!-- 成功した場合に推移するページ -->
+            <result name="success">inquiry.jsp</result>
+        </action>
+
+        <!-- InquiryCompleteActionの設定 -->
+        <action name="InquiryCompleteAction"
+                class="com.diworksdev.webprojv1.action.InquiryCompleteAction"
+                method="execute">
+            <!-- 成功した場合に推移するページ -->
+            <result name="success">inquiryComplete.jsp</result>
+        </action>
+
+        <!-- TestActionの設定 -->
+        <action name="TestAction"
+                class="com.diworksdev.webprojv1.action.TestAction"
+                method="execute">
+            <!-- 成功した場合に推移するページ -->
+            <result name="success">test.jsp</result>
+        </action>
+
+
+
+    </package>
+</struts>
+
+<!-- Actionに対応する画面推移のルールを定義しているファイル -->
